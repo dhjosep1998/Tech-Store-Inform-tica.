@@ -1,7 +1,7 @@
 import { useState } from "react";
 import "./App.css";
 import Editoras from "./components/editoras.jsx";
-import Footer from "./components/Footer.jsx";
+import Footer from "./components/footer.jsx";
 
 import Header from "./components/header.jsx";
 import Categorias from "./components/categorias.jsx";
