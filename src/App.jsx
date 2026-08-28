@@ -6,9 +6,13 @@ import Header from "./components/header.jsx";
 import Categorias from "./components/categorias.jsx";
 import ProductCard from "./components/produtocard.jsx";
 import Marcas from "./components/marcas.jsx";
-import produtos from "./data/produtos.js";
+import FormularioProduto from "./components/FormularioProduto.jsx";
+
+import produtosIniciais from "./data/produtos.js";
 
 function App() {
+  const [produtos, setProdutos] = useState(produtosIniciais);
+
   const [categoriaSelecionada, setCategoriaSelecionada] =
     useState("Todos");
 
@@ -24,11 +28,19 @@ function App() {
     setCategoriaSelecionada(categoria);
   }
 
+  function adicionarProduto(novoProduto) {
+    setProdutos([...produtos, novoProduto]);
+  }
+
   return (
     <div>
       <Header />
 
       <main>
+        <FormularioProduto
+          adicionarProduto={adicionarProduto}
+        />
+
         <section>
           <h2>Produtos</h2>
 
