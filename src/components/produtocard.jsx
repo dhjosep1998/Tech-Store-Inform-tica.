@@ -9,7 +9,7 @@ function ProductCard({ produto }) {
 
       <h3>{produto.nome}</h3>
 
-      <p>Autor: {produto.autor}</p>
+      <p>Marca: {produto.marca}</p>
 
       <p>Categoria: {produto.categoria}</p>
 

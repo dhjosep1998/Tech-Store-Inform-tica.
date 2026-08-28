@@ -1,7 +1,7 @@
 function Header() {
   return (
     <header>
-      <h1>Tech Store</h1>
+      <h1>Tech Store Informática</h1>
 
       <nav>
         <a href="#">Início</a>

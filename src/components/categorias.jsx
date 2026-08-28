@@ -1,11 +1,10 @@
 function Categorias({ filtrarCategoria, categoriaSelecionada }) {
   const categorias = [
     "Todos",
-    "Ficção",
-    "Tecnologia",
-    "Teologia",
-    "História",
-    "Desenvolvimento Pessoal",
+    "Notebooks",
+    "Periféricos",
+    "Armazenamento",
+    "Monitores",
   ];
 
   return (

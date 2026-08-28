@@ -1,12 +1,11 @@
 import { useState } from "react";
 import "./App.css";
-import Editoras from "./components/editoras.jsx";
 import Footer from "./components/footer.jsx";
-
 import Header from "./components/header.jsx";
 import Categorias from "./components/categorias.jsx";
 import ProductCard from "./components/produtocard.jsx";
 import produtos from "./data/produtos.js";
+import Marcas from "./components/marcas.jsx";
 
 function App() {
   const [categoriaSelecionada, setCategoriaSelecionada] = useState("Todos");
@@ -33,7 +32,7 @@ function App() {
         />
 
         <section>
-          <h2>Livros</h2>
+          <h2>Produtos</h2>
 
           <div className="lista-produtos">
             {produtosFiltrados.map((produto) => (
@@ -44,11 +43,14 @@ function App() {
             ))}
           </div>
         </section>
-        <Editoras />
-         </main>
-       <Footer />
+        <Marcas />
+      </main>
+      
+
+      <Footer />
     </div>
   );
 }
 
 export default App;
+
