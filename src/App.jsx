@@ -1,20 +1,23 @@
 import { useState } from "react";
 import "./App.css";
+
 import Footer from "./components/footer.jsx";
 import Header from "./components/header.jsx";
 import Categorias from "./components/categorias.jsx";
 import ProductCard from "./components/produtocard.jsx";
-import produtos from "./data/produtos.js";
 import Marcas from "./components/marcas.jsx";
+import produtos from "./data/produtos.js";
 
 function App() {
-  const [categoriaSelecionada, setCategoriaSelecionada] = useState("Todos");
+  const [categoriaSelecionada, setCategoriaSelecionada] =
+    useState("Todos");
 
   const produtosFiltrados =
     categoriaSelecionada === "Todos"
       ? produtos
       : produtos.filter(
-          (produto) => produto.categoria === categoriaSelecionada
+          (produto) =>
+            produto.categoria === categoriaSelecionada
         );
 
   function filtrarCategoria(categoria) {
@@ -26,11 +29,6 @@ function App() {
       <Header />
 
       <main>
-        <Categorias
-          filtrarCategoria={filtrarCategoria}
-          categoriaSelecionada={categoriaSelecionada}
-        />
-
         <section>
           <h2>Produtos</h2>
 
@@ -43,9 +41,14 @@ function App() {
             ))}
           </div>
         </section>
+
+        <Categorias
+          filtrarCategoria={filtrarCategoria}
+          categoriaSelecionada={categoriaSelecionada}
+        />
+
         <Marcas />
       </main>
-      
 
       <Footer />
     </div>
@@ -53,4 +56,3 @@ function App() {
 }
 
 export default App;
-

@@ -98,6 +98,31 @@ main button.categoria-ativa {
   background-color: white;
 }
 
+/* ÁREAS DA LOJA */
+
+main select {
+  padding: 10px 14px;
+  border: 1px solid #d1d5db;
+  border-radius: 8px;
+  font-size: 15px;
+  background-color: white;
+  color: #1f2937;
+  cursor: pointer;
+  min-width: 220px;
+}
+
+main select option {
+  color: #1f2937;
+  background-color: white;
+}
+
+main select:focus {
+  outline: 2px solid #1f2937;
+  outline-offset: 2px;
+}
+
+/* MARCAS */
+
 .marcas {
   margin-top: 50px;
   padding: 30px;
@@ -125,6 +150,8 @@ main button.categoria-ativa {
   transform: translateY(-5px);
 }
 
+/* FOOTER */
+
 footer {
   margin-top: 50px;
   padding: 20px;
@@ -136,6 +163,8 @@ footer {
 footer p {
   margin: 0;
 }
+
+/* RESPONSIVIDADE */
 
 @media (max-width: 768px) {
   header {
@@ -179,6 +208,10 @@ footer p {
   }
 
   main button {
+    width: 100%;
+  }
+
+  main select {
     width: 100%;
   }
 

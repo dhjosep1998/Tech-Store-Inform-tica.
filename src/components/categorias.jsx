@@ -1,31 +1,27 @@
 function Categorias({ filtrarCategoria, categoriaSelecionada }) {
   const categorias = [
     "Todos",
-    "Notebooks",
-    "Periféricos",
-    "Armazenamento",
-    "Monitores",
+    "Computadores",
+    "Acessórios",
+    "Impressoras",
+    "Games",
+    "Gadgets",
   ];
 
   return (
     <section>
-      <h2>Categorias</h2>
+      <h2>Áreas da Loja</h2>
 
-      <div>
+      <select
+        value={categoriaSelecionada}
+        onChange={(event) => filtrarCategoria(event.target.value)}
+      >
         {categorias.map((categoria) => (
-          <button
-            key={categoria}
-            className={
-              categoriaSelecionada === categoria
-                ? "categoria-ativa"
-                : ""
-            }
-            onClick={() => filtrarCategoria(categoria)}
-          >
+          <option key={categoria} value={categoria}>
             {categoria}
-          </button>
+          </option>
         ))}
-      </div>
+      </select>
     </section>
   );
 }

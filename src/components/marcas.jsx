@@ -2,9 +2,9 @@ function Marcas() {
   const marcas = [
     "Lenovo",
     "Logitech",
+    "HP",
     "Redragon",
-    "Kingston",
-    "LG",
+    "Samsung",
   ];
 
   return (
